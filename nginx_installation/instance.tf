@@ -26,3 +26,22 @@ resource "aws_instance" "nginx_provision" {
     private_key = file(var.PATH_TO_PRIVATE_KEY)
   }
 }
+
+resource "aws_ebs_volume" "ebs-volume-1" {
+  availability_zone = aws_instance.nginx_provision.availability_zone
+  size              = 20
+  type              = "gp2"
+  tags = {
+    Name = "extra volume data"
+  }
+}
+
+resource "aws_volume_attachment" "ebs-volume-1-attachment" {
+  device_name = "/dev/xvdh"
+  volume_id   = aws_ebs_volume.ebs-volume-1.id
+  instance_id = aws_instance.nginx_provision.id
+}
+
+output "ip" {
+  value = aws_instance.nginx_provision.public_ip
+}

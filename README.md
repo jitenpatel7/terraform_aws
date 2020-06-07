@@ -5,6 +5,8 @@ This project and the scripts within utilise a credentials file (`.tfvars`) which
 
 For example purposes, the machines are provisioned as T2 Micro's, though these can be changed to match your needs within each `instance.tf` file.
 
+Utilise `ssh-keygen` to allow for SSH access onto provisioned machines.
+
 Versions Used:
 
 * Terraform > v0.12
