@@ -9,3 +9,5 @@ Versions Used:
 
 * Terraform > v0.12
 * AWS Provider Plugin > v2.65.0
+
+The GitHub Action Terraform Lint, is used to verify Terraform files once pull requests are opened.
