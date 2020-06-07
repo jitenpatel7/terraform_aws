@@ -26,4 +26,3 @@ resource "aws_instance" "nginx_provision" {
     private_key = file(var.PATH_TO_PRIVATE_KEY)
   }
 }
-
