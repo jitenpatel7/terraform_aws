@@ -7,7 +7,7 @@ done
 
 # install nginx
 apt-get update
-apt-get -y install nginx
+apt-get -y install nginx awscli
 
 # make sure nginx is started
 service nginx start
