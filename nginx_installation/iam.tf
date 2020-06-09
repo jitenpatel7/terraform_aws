@@ -24,8 +24,8 @@ resource "aws_iam_instance_profile" "developer-role-instanceprofile" {
 }
 
 resource "aws_iam_role_policy" "developer-role-policy" {
-  name = "developer-role-policy"
-  role = aws_iam_role.developer-role.id
+  name   = "developer-role-policy"
+  role   = aws_iam_role.developer-role.id
   policy = <<EOF
 {
     "Version": "2012-10-17",

@@ -1,7 +1,7 @@
 resource "aws_instance" "nginx_provision" {
-  ami           = var.AMIS[var.AWS_REGION]
-  instance_type = "t2.micro"
-  key_name      = aws_key_pair.access_key.key_name
+  ami                  = var.AMIS[var.AWS_REGION]
+  instance_type        = "t2.micro"
+  key_name             = aws_key_pair.access_key.key_name
   iam_instance_profile = aws_iam_instance_profile.developer-role-instanceprofile.name
 
   provisioner "file" {
